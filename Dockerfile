@@ -1,6 +1,6 @@
 FROM debian:latest
 RUN echo "password password none none none none none Y Y" | adduser ut2k4server 
-RUN usermod -aG sudo ut2k4server
+# RUN usermod -aG sudo ut2k4server
 RUN dpkg --add-architecture i386
 RUN apt update
 RUN apt install procps curl wget file tar bzip2 gzip unzip bsdmainutils python python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 -y

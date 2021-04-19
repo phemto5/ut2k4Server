@@ -1,7 +1,7 @@
 version: "3"
 services: 
     ut2k4:
-      name: ut2004Server
+      container_name: : ut2004Server
       dns: 192.168.1.21
       hostname: ut2004Server
       build: .

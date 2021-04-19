@@ -1,10 +1,11 @@
 FROM debian:latest
 RUN echo "password password none none none none none Y" | adduser ut2k4server 
-RUN apt update && apt install python3 cpio wget diffutils epel-release python36 file bzip2 unzip bc jq tmux nmap-ncat glibc.i686 libstdc++.i686 procps  -y 
+RUN usermod -aG sudo ut2k4server
+RUN dpkg --add-architecture i386; apt update; apt install curl wget file tar bzip2 gzip unzip bsdmainutils python python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 -y
 RUN su - ut2k4server 
 RUN wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh ut2k4server \
 && ./ut2k4server ul \
-&& ./ut2k4server ai \
+&& ./ut2k4server ai 
 RUN echo "SRVER-8BD3N-DG6CD-HCNAB" | ./ut2k4server cd  
 
 ENTRYPOINT [ "./ut2k4server", "start" ]

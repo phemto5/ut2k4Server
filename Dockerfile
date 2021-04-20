@@ -5,7 +5,7 @@ RUN dpkg --add-architecture i386
 RUN apt update
 RUN apt install procps curl wget file tar bzip2 gzip unzip bsdmainutils python python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 -y
 RUN echo 'wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh ut2k4server' | su - ut2k4server
-RUN echo "./ut2k4server i" | su - ut2k4server
+RUN echo "./ut2k4server ai" | su - ut2k4server
 RUN echo "./ut2k4server st" | su - ut2k4server
 # RUN echo "Y Y Y SRVER-8BD3N-DG6CD-HCNAB  Y Y " | echo "./ut2k4server i" | su - ut2k4server
 # RUN echo 'echo "SRVER-8BD3N-DG6CD-HCNAB" | ./ut2k4server cd ' | su - ut2k4server

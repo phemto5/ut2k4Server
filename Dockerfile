@@ -1,7 +1,7 @@
 FROM debian:latest
-COPY ./Entry.sh .
+COPY Entry.sh .
 RUN chmod +x Entry.sh
-RUN echo "p p n n n n n Y " | adduser ut2k4server 
+RUN printf "p\np\n\n\n\n\n\nY\n" | adduser ut2k4server 
 # RUN usermod -aG sudo ut2k4server
 RUN dpkg --add-architecture i386
 RUN apt update
@@ -10,7 +10,7 @@ RUN echo 'wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bas
 RUN echo "./ut2k4server ai" | su - ut2k4server
 RUN echo "./ut2k4server st" | su - ut2k4server
 # RUN echo "Y Y Y SRVER-8BD3N-DG6CD-HCNAB  Y Y " | echo "./ut2k4server i" | su - ut2k4server
-# RUN echo 'echo "SRVER-8BD3N-DG6CD-HCNAB" | ./ut2k4server cd ' | su - ut2k4server
+RUN printf 'SRVER-8BD3N-DG6CD-HCNAB\n' |  echo './ut2k4server cd' | su - ut2k4server
 
 ENTRYPOINT ["./Entry.sh" ]
 

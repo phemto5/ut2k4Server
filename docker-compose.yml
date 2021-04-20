@@ -5,6 +5,7 @@ services:
       dns: 192.168.1.21
       hostname: ut2004Server
       build: .
+      image: nicholasaa/ut2k4server
       ports: 
         - "8888-8899:7777-7788/udp"
         - "8888-8899:7777-7788/tcp"

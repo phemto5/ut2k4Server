@@ -1,7 +1,7 @@
 FROM debian:latest
-COPY Entry.sh .
+COPY ./Entry.sh .
 RUN chmod +x Entry.sh
-RUN printf "p\np\n\n\n\n\n\n\n" | adduser ut2k4server 
+RUN printf "password\npassword\nNone\nNone\nNone\nNone\nNone\nY\n" | adduser ut2k4server 
 # RUN usermod -aG sudo ut2k4server
 RUN dpkg --add-architecture i386
 RUN apt update

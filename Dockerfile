@@ -12,7 +12,7 @@ RUN echo "./ut2k4server st" | su - ut2k4server
 # RUN echo "Y Y Y SRVER-8BD3N-DG6CD-HCNAB  Y Y " | echo "./ut2k4server i" | su - ut2k4server
 # RUN echo 'echo "SRVER-8BD3N-DG6CD-HCNAB" | ./ut2k4server cd ' | su - ut2k4server
 
-ENTRYPOINT ["/bin/sh","./Entry.sh" ]
+ENTRYPOINT ["./Entry.sh" ]
 
 EXPOSE 7777-7788/udp 27900/udp 42292/udp 8075/udp
 EXPOSE 7777-7788/tcp 27900/tcp 42292/tcp 8075/tcp

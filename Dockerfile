@@ -7,6 +7,8 @@ RUN dpkg --add-architecture i386
 RUN apt update
 RUN apt install procps curl wget file tar bzip2 gzip unzip bsdmainutils python python3 cpio util-linux ca-certificates binutils bc jq tmux netcat lib32gcc1 lib32stdc++6 -y
 COPY ./install.sh .
+RUN chmod +x ./install.sh
+RUN chmod 777 ./install.sh
 RUN su -c ./install.sh ut2k4server
 # RUN echo 'wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh ut2k4server' | su - ut2k4server
 # RUN echo "./ut2k4server ai" | su - ut2k4server

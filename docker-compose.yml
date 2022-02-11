@@ -14,3 +14,9 @@ services:
         - "42292/tcp"
         - "42292/udp"
         - "8075:8075/tcp"
+      networks:
+        - vmnw
+networks:
+  vmnw:
+    external:
+      name: vm_nw
